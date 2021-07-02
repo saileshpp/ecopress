@@ -1,0 +1,1094 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import "var";
+@import "comp";
+
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden !important;
+   
+}
+
+.top {
+    background: $brand;
+    color: #fff;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: .8rem;
+    transition: 200ms;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    &:hover {
+        background: $dbrand;
+    }
+}
+
+.hero-container {
+    .hero {
+        #donate-btn {
+            padding: 0.8em 2.5em;
+            border-radius: 25px;
+            span {
+                display: block;
+            }
+            &::before {
+                content: "";
+            }
+        }
+        #wallet-btn {
+            padding: 0.8em 1.3em;
+            border-radius: 50%;
+            display: none;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            z-index: 20;
+            width: 100%;
+            padding: 0.8em 0 1.6em 0;
+
+            .navbar-brand {
+                img {
+                    width: 100%;
+                }
+            }
+            .nav-item {
+                display: flex;
+                align-items: center;
+                position: relative;
+                .nav-link {
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 0.8rem;
+                    margin-top: 12px;
+                    margin-right:20px;
+
+                    &:hover {
+                        color: rgba($color: #fff, $alpha: 0.6);
+                    }
+                }
+                &:hover .dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(20px);
+                }
+                .dropdown {
+                    padding: 0;
+                    background: #fff;
+                    position: absolute;
+                    top: 50px;
+                    transition: 300ms;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(30px);
+                    .dropdown-items {
+                        list-style: none;
+                        font-size: 0.8rem;
+                        padding: 1em;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        transition: 300ms;
+                        display: block;
+                        &:not(:last-child) {
+                            border-bottom: 1px solid #eee;
+                        }
+                        &:hover {
+                            color: $brand;
+                        }
+                    }
+                }
+                .shortcodes {
+                    width: 800px;
+                    right: -120px;
+                    padding: 0.5em;
+                }
+                .post-type {
+                    width: 1200px;
+                    right: -240px;
+                    padding: 0.5em;
+                    h1 {
+                        font-size: .8rem;
+                        padding: 1em .5em;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        font-weight: bold;
+                        &:hover {
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+            .btn {
+                padding: 0.8em 2.5em;
+                transition: 250ms;
+            }
+        }
+        .carousel {
+            display: block;
+        }
+        .carousel-inner {
+            .carousel-item {
+                height: 80vh;
+                &:first-child {
+                    .carousel-caption {
+                        text-align: start !important;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        h1 {
+                            font-size: 1.2rem;
+                            color: #fff;
+                        }
+                        h5 {
+                            font-size: 4rem;
+                            font-weight: 300;
+                            margin: 40px 0;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .carousel-caption {
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -15%;
+                        h5 {
+                            font-size: 4rem;
+                            font-weight: 300;
+                            span {
+                                color: $brand;
+                            }
+                            &:nth-child(2) {
+                                margin-left: 200px;
+                            }
+                        }
+                        p {
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            width: 350px;
+                            text-align: start;
+                            position: absolute;
+                            bottom: -120px;
+                            right: 40%;
+                        }
+                    }
+                }
+                &:last-child {
+                    .carousel-caption {
+                        top: 55%;
+                        transform: translateY(-50%);
+                    }
+                    h5 {
+                        font-size: 4rem;
+                        font-weight: 300;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        margin: 20px;
+                    }
+                }
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .carousel-control-prev {
+            left: -6%;
+        }
+        .carousel-control-next {
+            right: -6%;
+        }
+        .carousel-indicators {
+            bottom: -8px;
+            button {
+                border-radius: 50%;
+                width: 6px;
+                height: 6px;
+                background: transparent;
+                border: 2px solid #fff;
+            }
+            i {
+                color: #fff;
+                width: 6px;
+                height: 6px;
+                font-size: 0.8rem;
+                margin: -1px 10px;
+                &:last-child {
+                    color: gray;
+                }
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.cmsmaster {
+    .cms-wrapper {
+        display: flex;
+        .img-wrapper {
+            width: 120px;
+            img {
+                width: 100%;
+            }
+        }
+        .img-description {
+            margin: 20px 0;
+            h5 {
+                font-size: 1rem;
+                font-weight: 700;
+                color: $black;
+            }
+            p {
+                font-size: 1rem;
+                color: $black;
+                font-weight: 300;
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.banner {
+    .title {
+        color: $black;
+        text-align: center;
+        margin: 50px 0;
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+        }
+        P {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    }
+    .wecome-img {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            object-position: center center;
+        }
+    }
+
+    .welcome {
+        background: #f9f9f9;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .text-wrapper {
+            padding: 5.5em 7em;
+            h5 {
+                color: $dbrand;
+                font-size: 0.9rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                padding: 2.5em 0;
+                text-align: initial;
+            }
+
+            h1 {
+                font-weight: 300;
+                color: $black;
+                font-size: 3.5rem;
+            }
+
+            p {
+                padding: 2em 0;
+                font-size: 01rem;
+                color: gray;
+                font-weight: 300;
+            }
+        }
+    }
+    .counter-wrapper {
+        background: $dbrand;
+        color: #fff;
+        .count {
+            display: flex;
+            flex-direction: column;
+        }
+        .counter {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 300;
+            margin-left: 20px;
+        }
+        span {
+            text-align: center;
+            margin-left: 20px;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    }
+
+    .featured-container {
+        background: $lgray;
+
+        .green-wrapper {
+            background: #fff;
+            border: 1px solid rgb(226, 226, 226);
+
+            .img-wrapper {
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        opacity: 0.8;
+                    }
+                }
+                &::before {
+                    color: #fff;
+                    font-family: $fontawesome;
+                    content: "\f555" !important;
+                    font-weight: 900;
+                    position: absolute;
+                    text-align: center;
+                    line-height: 300px;
+                    font-size: 2.5rem ;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background: $dbrand;
+                    opacity: 0;
+                    z-index: 4;
+                    cursor: pointer;
+                    transition: opacity 500ms;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .middle {
+            margin-left: 20px;
+            h1 {
+                font-size: 2.5rem;
+                color: $black;
+                font-weight: 300;
+                span {
+                    color: $brand;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 0.1rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                color: $gray;
+                font-weight: 300;
+            }
+        }
+
+        .battery {
+            background: $lgray;
+            width: 100%;
+            height: 300px;
+            margin-left: 50px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 15px;
+                width: 100%;
+                background: $dbrand;
+            }
+            .circle {
+                position: absolute;
+                top: 20px;
+                left: -30px;
+                background: #fff;
+                border-radius: 50%;
+                border: 1px solid $brand;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                font-size: 2rem;
+                color: $black;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                padding-top: 10px;
+                span {
+                    color: $brand;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .fundraiser {
+        overflow-y: hidden;
+        position: relative;
+        img {
+            z-index: -1;
+            width: 100%;
+            position: absolute;
+        }
+        .owl-wrapper {
+            .img-wrapper {
+                img {
+                    width: 100%;
+                    position: relative;
+                }
+            }
+            .owl-carousel {
+                position: relative;
+                .owl-nav {
+                    position: absolute;
+                    top: -130px;
+                    right: 6px;
+                    .owl-prev,
+                    .owl-next {
+                        background: #fff;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 0.2em;
+                        line-height: 5px;
+                        transition: background 200ms;
+
+                        &:hover {
+                            background: $brand;
+                            span {
+                                color: #fff;
+                            }
+                        }
+                        span {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            h1 {
+                color: #fff;
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin: 6rem 0;
+                letter-spacing: 1px;
+            }
+            .owl-card {
+                margin: 0 0.6em;
+                text-align: center;
+                .img-wrapper{
+                    position: relative;
+                    &:hover {
+                        &::before {
+                            opacity: 0.8;
+                        }
+                    }
+                    &::before {
+                        color: #fff;
+                        font-family: $fontawesome;
+                        content: "\f555" !important;
+                        font-weight: 900;
+                        position: absolute;
+                        text-align: center;
+                        line-height: 300px;
+                        font-size: 2.5rem ;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        background: $dbrand;
+                        opacity: 0;
+                        z-index: 4;
+                        cursor: pointer;
+                        transition: opacity 500ms;
+                    }
+                }
+                h1 {
+                    color: #000;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+                .card-details {
+                    background: #fff;
+                    padding: 0.4em 1.5em;
+                    h1 {
+                        color: $black;
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                        padding-top: 1em;
+                    }
+                    p {
+                        color: $brand;
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                        padding-top: 1.5em;
+                        text-transform: uppercase;
+                    }
+                    .donated {
+                        color: $black;
+                        font-weight: 300;
+                        padding: 0;
+                        text-transform: inherit;
+                        padding-top: 1em;
+                    }
+                    .progress {
+                        height: 8px;
+                        border-radius: 0;
+                        .progress-bar {
+                            background: $brand;
+                            width: 10%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .fundraiser-footer {
+            background: $brand;
+            color: #fff;
+            h1 {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+            .btn {
+                background: #fff;
+                color: $black;
+            }
+        }
+    }
+
+    .article {
+        background: url(./img/water-conservation.jpg);
+        height: 500px;
+        text-align: center;
+        padding-top: 10em;
+        h5 {
+            color: $brand;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        h1 {
+            color: $black;
+            font-weight: 300;
+            font-size: 3.5rem;
+            padding: 0 2em;
+        }
+    }
+
+    .latest-news {
+        h5 {
+            font-size: 2.5em;
+            font-weight: 300;
+            padding: 1em 0;
+        }
+        .owl-carousel {
+            position: relative;
+            .owl-nav {
+                position: absolute;
+                top: -80px;
+                right: 0px;
+                .owl-prev,
+                .owl-next {
+                    background: $lgray;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 0.2em;
+                    line-height: 5px;
+                    transition: background 200ms;
+
+                    &:hover {
+                        background: $brand;
+                        span {
+                            color: #fff;
+                        }
+                    }
+                    span {
+                        color: $black;
+                    }
+                }
+            }
+            .card-details {
+                border: 1px solid rgb(224, 224, 224);
+
+                .date-container {
+                    border-bottom: 1px solid rgb(224, 224, 224);
+                    padding: 0.5em 1em;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .date,
+                    .like {
+                        color: $gray;
+                        text-transform: uppercase;
+                        font-size: .8rem;
+                        letter-spacing: 1px;
+                        font-weight: 700;
+                        i {
+                            margin: 0 0.5em;
+                            color: $brand;
+                        }
+                    }
+                }
+
+                .more-details {
+                    padding: 1.5em 1em;
+
+                    h1 {
+                        font-size: 1.5rem;
+                        color: $black;
+                        font-weight: 300;
+                    }
+                    .h1-detail {
+                        text-transform: uppercase;
+                        font-size: 0.7rem;
+                        font-weight: 600;
+                        span {
+                            color: $brand;
+                        }
+                    }
+                    p {
+                        padding-top: 2em;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $gray;
+                        line-height: 1.5;
+                    }
+                    a {
+                        color: $brand;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-article {
+        color: #fff;
+        background: url(./img/future-2.jpg);
+        padding: 6em 2em;
+        text-align: center;
+        h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 2em 0;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+        }
+        p {
+            padding: 2em;
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 2;
+        }
+        .play {
+            border: 2.5px solid #fff;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin: 3em auto;
+            cursor: pointer;
+            text-align: center;
+            display: grid;
+            place-items: center;
+            i{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// campaigns
+.hero-campaigns {
+    background: url(./img/campaigns.jpg);
+    background-position: top;
+    background-size: cover;
+    text-align: center;
+    height: 70vh;
+    display: grid;  
+    place-items: center;
+    
+    h1 {
+        color: #fff;
+        font-size: 2.6rem;
+        font-weight: 300;
+    }
+    p {
+        font-size: 0.8rem;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+.campaign-banner {
+    .campaign-fundraiser {
+        background-color: $lgray;
+    }
+    .featured-container {
+        position: relative;
+        .background {
+            background: url(./img/featured-campaign.jpg) center no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 1em;
+        }
+
+        .green-wrapper {
+            z-index: 10;
+            background-color: #fff;
+        }
+        .featured-carousel {
+            background-color: $brand;
+            display: flex;
+            align-items: center;
+            padding: 2em 0;
+            .feature {
+                display: grid;
+                place-items: center;
+            }
+            .img-wrapper {
+                width: 90%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .donaters {
+        h1 {
+            color: $black;
+        }
+        .img-wrapper {
+            img {
+                width: 100%;
+            }
+        }
+        .donation-card {
+            border: 1px solid #dfdddd;
+            text-align: center;
+            padding: 1em 0 0 0;
+            h2 {
+                font-size: 1.6rem;
+                color: $black;
+                font-weight: 300;
+            }
+            p {
+                font-size: 0.8rem;
+                color: $brand;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+            .donation-amount {
+                font-size: 1rem;
+                color: $black;
+                font-weight: 300;
+                border-top: 1px solid #dfdddd;
+                padding: 0.5em 0;
+            }
+        }
+    }
+}
+
+// Dontation page
+
+.hero-donate {
+    background: url(./img/subpage-heading.jpg) no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    h1 {
+        color: #fff;
+        font-size: 2.6rem;
+        font-weight: 300;
+    }
+    p {
+        font-size: 0.8rem;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.dontaion-banner {
+    h1 {
+        font-size: 2.2rem;
+        color: #000;
+        font-weight: 300;
+    }
+    h2 {
+        color: $black;
+        font-size: 1.4rem;
+        font-weight: 300;
+        span {
+            color: $brand;
+        }
+    }
+    .form-check-input {
+        width: 20px;
+        height: 20px;
+    }
+    .form-check-label, label {
+        color: $black;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    .form-check-label{
+        font-weight: 300;
+    }
+    .form-select, .form-control{
+        color: $black;
+        font-size: 1rem;
+        font-weight: 300;
+        border-radius: 25px;
+    }
+    .floatingTextarea2{
+        font-weight: 300;
+    }
+}
+
+//Footer
+
+.footer {
+    background: #303030;
+    color: #fff;
+
+    .about {
+        h1 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        img {
+            width: 80%;
+            margin: 2em 0;
+        }
+        p {
+            font-size: .9rem;
+            color: $gray;
+            width: 80%;
+        }
+
+        ul {
+            padding: 0;
+            margin: 2em 0;
+            li {
+                list-style: none;
+                padding: 0.5em 0;
+                font-size: .9rem;
+                letter-spacing: 0.5px;
+                color: $lgray;
+                transition: 200ms;
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .cloud-container {
+            border: 1px solid rgb(65, 65, 65);
+            font-size: 0.9rem;
+            padding: 0.5em 1em;
+            text-align: center;
+            cursor: pointer;
+            transition: 200ms;
+            &:hover {
+                background: #fff;
+                color: #303030;
+            }
+        }
+    }
+
+    .contact {
+        text-align: center;
+        i {
+            color: $brand;
+            font-size: 3rem;
+        }
+        p {
+            color: $gray;
+            font-size: 1.2rem;
+            margin-top: 1.2em;
+        }
+    }
+
+    .mini-footer {
+        border-top: 0.5px solid $gray;
+        color: $gray;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 2em 0;
+        span {
+            color: $brand;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+        p {
+            color: $brand;
+            cursor: pointer;
+            transition: 200ms;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .fundraiser {
+        height: 700px;
+        img {
+            margin-top: 0 !important;
+        }
+    }
+    #donate-btn {
+        span {
+            display: none !important;
+        }
+        &::before {
+            content: "\f555" !important;
+            font-family: "Font Awesome 5 Free";
+        }
+
+        padding: 0.8em 1.3em !important;
+        border-radius: 50% !important;
+    }
+    .navbar-brand {
+        background: rgba(128, 128, 128, 0);
+        mix-blend-mode: difference;
+    }
+    .carousel-item {
+        &:nth-child(2) {
+            .carousel-caption {
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0% !important;
+            }
+        }
+    }
+    .welcome-page {
+        .welcome {
+            .text-wrapper {
+                padding: 4em 3.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    //Hero
+    
+  
+    .navbar {
+        background: #fff;
+        padding-bottom: 20px;
+        z-index: 2;
+        .navbar-nav {
+            margin-top: 10px;
+        }
+        .nav-link {
+            color: #000 !important;
+            transition: none !important;
+
+            font-size: 0.8rem !important;
+            padding: 0.5em;
+        }
+        .nav-item {
+            &:not(:nth-child(6)) {
+                border-bottom: 1px solid rgb(196, 194, 194);
+            }
+            background: #fff;
+            padding: 0.1em 1em;
+
+            .active {
+                color: $brand;
+            }
+        }
+    }
+    .collapse {
+        transition: none;
+    }
+    #donate-btn {
+        display: none;
+    }
+    .navbar-toggler {
+        background: #fff;
+        border: 1px solid gray;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        margin-top: 15px;
+        margin-right: 10px;
+        font-size: 0.45rem;
+
+        img {
+            width: 100%;
+        }
+        .navbar-toggler-icon {
+            width: 10px;
+            margin-right: 10px;
+            margin: -4px;
+        }
+    }
+    #wallet-btn {
+        display: block !important;
+    }
+
+    .fundraiser {
+        height: 900px;
+    }
+
+    .article {
+        h1 {
+            padding: 0 0.4em;
+            font-size: 1.5rem !important;
+        }
+    }
+}
+
+@media  (max-width: 425px) {
+    //Hero
+    .video-article {
+        height: 600px !important;
+        padding: 4em 2em !important;
+    }
+    .cmsmaster {
+        margin-top: 70px;
+    }
+    .navbar {
+        height: 100px !important;
+    }
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fundraiser {
+        height: 1000px;
+        .img-wrapper {
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

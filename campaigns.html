@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!--My CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://eco-press.cmsmasters.net/wp-content/uploads/2016/06/icon-—-коjпия.png"
+        sizes="192x192">
+    <title>Eco Press - Go green, there is no planet B</title>
+</head>
+
+<body>
+    <!-- Go Top button -->
+    <button class="top" onclick="goTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+    <!--Hero     -->
+    <section class="hero-container">
+        <div class="hero">
+
+            <!--Nav Bar-->
+            <nav class="navbar navbar-expand-sm navbar-light" id="navbar">
+                <div class="container nav-wrapper">
+                    <a class="navbar-brand" href="./index.html"><img src="img/logo.png" alt="Eco-Press" id="logo" /></a>
+                    <div class="d-flex">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="btn btn-primary" id="wallet-btn"> <span> <i class="fas fa-wallet"></i></span></div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./campaigns.html">Campaigns</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">features</a>
+
+                                <!--Drop Down-->
+                                <ul class="dropdown">
+                                    <li class="dropdown-items">About us</li>
+                                    <li class="dropdown-items">Projects</li>
+                                    <li class="dropdown-items">Events</li>
+                                    <li class="dropdown-items">News</li>
+                                    <li class="dropdown-items">Contacts</li>
+                                </ul>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">shortcodes</a>
+
+                                <!--Drop Down-->
+                                <ul class="dropdown shortcodes">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <li class="dropdown-items"> BLOG SHORTCODE</li>
+                                            <li class="dropdown-items"> BUTTONS & ICONS</li>
+                                            <li class="dropdown-items"> CLIENTS</li>
+                                            <li class="dropdown-items"> COUNTERS & PROGRESS BARS</li>
+                                            <li class="dropdown-items"> CUSTOM HTML, CSS, JS</li>
+                                            <li class="dropdown-items"> DIVIDERS</li>
+                                        </div>
+                                        <div class="col-3">
+                                            <li class="dropdown-items"> EMBEDDED</li>
+                                            <li class="dropdown-items"> FEATURED BLOCKS</li>
+                                            <li class="dropdown-items"> GALLERY</li>
+                                            <li class="dropdown-items"> GOOGLE MAPS</li>
+                                            <li class="dropdown-items"> ICON BOXES</li>
+                                            <li class="dropdown-items"> ICON LISTS</li>
+                                            <li class="dropdown-items"> IMAGES</li>
+                                        </div>
+                                        <div class="col-3">
+                                            <li class="dropdown-items"> NOTICE BOXES</li>
+                                            <li class="dropdown-items"> PORTFOLIO SHORTCODE</li>
+                                            <li class="dropdown-items"> POSTS OR PROJECTS SLIDER</li>
+                                            <li class="dropdown-items"> PRICING TABLES</li>
+                                            <li class="dropdown-items"> PROFILES</li>
+                                            <li class="dropdown-items"> QUOTES</li>
+                                            <li class="dropdown-items"> SIDEBARS</li>
+                                        </div>
+                                        <div class="col-3">
+                                            <li class="dropdown-items"> SLIDERS</li>
+                                            <li class="dropdown-items"> SOCIAL SHARING</li>
+                                            <li class="dropdown-items"> SPECIAL HEADINGS</li>
+                                            <li class="dropdown-items"> TABLES</li>
+                                            <li class="dropdown-items"> TABS & TOURS</li>
+                                            <li class="dropdown-items"> TOGGLES & ACCORDIONS</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">post type</a>
+
+                                <!--Drop Down-->
+                                <ul class="dropdown post-type">
+                                    <div class="row">
+
+                                        <div class="col-3">
+                                            <h1>BLOG</h1>
+                                            <li class="dropdown-items"> Standard blog</li>
+                                            <li class="dropdown-items"> MASONRY BLOG</li>
+                                            <li class="dropdown-items"> TIMELINE BLOG</li>
+
+                                        </div>
+
+                                        <div class="col-3">
+                                            <h1> PROJECTS GRID</h1>
+                                            <li class="dropdown-items"> LARGE GAP</li>
+                                            <li class="dropdown-items"> NO GAP</li>
+                                            <li class="dropdown-items"> 1 PIXEL GAP</li>
+                                        </div>
+
+                                        <div class="col-3">
+                                            <h1>MASONRY PUZZLE</h1>
+                                            <li class="dropdown-items"> LARGE GAP</li>
+                                            <li class="dropdown-items"> NO GAP</li>
+                                            <li class="dropdown-items"> 1 PIXEL GAP</li>
+                                        </div>
+
+                                        <div class="col-3">
+                                            <h1>PROFILES</h1>
+                                            <li class="dropdown-items"> HORIZONTAL</li>
+                                            <li class="dropdown-items"> VERTICAL</li>
+                                            <li class="dropdown-items"> OPEN PROFILE</li>
+                                        </div>
+
+                                    </div>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">shop</a>
+                            </li>
+                            <a class="btn btn-primary" id="donate-btn" href="./donation.html"> <span> donate
+                                    now!</span></a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero-campaigns">
+                <div class="title-container">
+
+                    <h1>Campaigns</h1>
+                    <p>HOME / CAMPAIGNS</p>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="banner campaign-banner">
+
+        <section class="fundraiser py-5 campaign-fundraiser">
+            <div class="container">
+
+                <div class="background">
+                    <div class="title">
+                        <h1>Fundraising Campaigns</h1>
+                        <p>Every voice counts! Choose campaign, donate and help us change the world</p>
+                    </div>
+
+
+                    <div class="owl-wrapper ">
+                        <div class="container">
+
+
+                            <h1>Fundraising Campaigns</h1>
+                            <div class="owl-carousel">
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/1-1-580x489.jpg" alt="" />
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Plant Challenge</h1>
+                                            <p>$9000 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="donated">Donated 10%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/2-1-580x489.jpg" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Recycling is the way</h1>
+                                            <p>$ 7350 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="donated">Donated 10%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/3-1-580x489.jpg" alt="">
+
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Safe Energy</h1>
+                                            <p>$ 11800 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                                            </div>
+                                            <p class="donated">Donated 5%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/4-1-580x489.jpg" alt="">
+
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Home for Everyone</h1>
+                                            <p>$ 10350 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+                                            </div>
+                                            <p class="donated">Donated 8%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/5-1-580x489.jpg" alt="">
+
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Go Green Movement</h1>
+                                            <p>$3050 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="donated">Donated 18%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/6-580x489.jpg" alt="">
+
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Environment Freiendly</h1>
+                                            <p>$ 2300 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar w-40" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                                            </div>
+                                            <p class="donated">Donated 23%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="owl-card">
+                                        <div class="img-wrapper">
+                                            <img src="./img/8-580x489.jpg" alt="">
+
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>GreenPress Community</h1>
+                                            <p>$16880 to go</p>
+                                            <div class="progress">
+                                                <div class="progress-bar w-40" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                                            </div>
+                                            <p class="donated">Donated 23%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <div class="featured-container">
+            <div class="background py-5">
+                <div class="container">
+
+                    <div class="title">
+                        <h1>Featured Campaign</h1>
+
+                    </div>
+
+                    <div class="green-wrapper py-4 px-4 px-md-4">
+                        <div class="row">
+                            <div class="col-sm-3 col-6">
+                                <div class="img-wrapper">
+                                    <img src="./img/featured.jpg" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 py-5 py-md-0 px-2">
+                                <div class="middle">
+                                    <h1>Into the Green<br>
+                                        <span>$ 11000 TO GO</span>
+                                    </h1>
+                                    <p>Cras dapibus ullamcorper dictum. Vivamus nec erat placerat felis scelerisque
+                                        porttitor in ac turpis. In nec imperdiet turpis. Suspendisse quis orci ut orci
+                                        pulvinar eleifend. Nulla eu mattis ipsum. Integer eget sagittis nulla. Praesent
+                                        consectetur lacus et maximus eleifend. Integer non lacus dui. Mauris tortor
+                                        diam,
+                                        laoreet quis commodo vitae, sodales vel augue.</p>
+                                    <div class="btn btn-primary">donate now</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-6">
+                                <div class="battery">
+                                    <div class="circle">
+                                        8% <span>DONATED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="featured-carousel">
+                <div class="container">
+                    <div class="owl-carousel feature">
+
+                        <div>
+                            <div class="img-wrapper">
+                                <img src="./img/bio-technology.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="img-wrapper">
+                                <img src="./img/eco-nature.png" alt="">
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="img-wrapper">
+                                <img src="./img/green-labs.png" alt="">
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="img-wrapper">
+                                <img src="./img/reuse-reduce-recycle1.png" alt="">
+
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div class="img-wrapper">
+                                <img src="./img/save-the-world.png" alt="">
+
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div class="img-wrapper">
+                                <img src="./img/water.png" alt="">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="donaters py-5">
+            <div class="container">
+                <div class="title">
+                    <h1>Latest Donators</h1>
+                    <p>Every voice matters! Donate and help us change the world</p>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-sm-3 col-6">
+                        <div class="img-wrapper">
+                            <img src="./img/donator1-580x489.jpg" alt="" srcset="">
+                        </div>
+                        <div class="donation-card">
+                            <h2>Mia Jameson</h2>
+                            <p>PLANT CHALLENGE</p>
+                            <div class="donation-amount">Donated $ 1000</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="img-wrapper">
+                            <img src="./img/donator2-580x489.jpg" alt="" srcset="">
+                        </div>
+                        <div class="donation-card">
+                            <h2>John Becker</h2>
+                            <p>RECYCLING IS THE WAY</p>
+                            <div class="donation-amount">Donated $ 850</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="img-wrapper">
+                            <img src="./img/donator3-580x489.jpg" alt="" srcset="">
+                        </div>
+                        <div class="donation-card">
+                            <h2>Helen Carter</h2>
+                            <p>SAFE ENERGY</p>
+                            <div class="donation-amount">Donated$ 700</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="img-wrapper">
+                            <img src="./img/donator4-580x489.jpg" alt="" srcset="">
+                        </div>
+                        <div class="donation-card">
+                            <h2>Kira Simon</h2>
+                            <p>FOREST ANIMALS RESCUE</p>
+                            <div class="donation-amount">Donated$ 1200</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Cmsmaster-->
+
+
+
+    <section class="footer pt-5">
+        <div class="container">
+            <div class="row about">
+                <div class="col-sm-4 col-12">
+                    <h1>ABOUT US </h1>
+                    <img src="./img/Depositphotos_26348281_original.png" alt="">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a when
+                        looking at its layout of using.</p>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <h1>CAMPAIGNS</h1>
+                    <ul>
+                        <li>SAVE THE EARTH</li>
+                        <li>SOLUTION AGAINST POLLUTION</li>
+                        <li>FOREST ANIMALS RESCUE</li>
+                        <li>ENERGY REVOLUTION</li>
+                        <li>PLANT A PLANT CHALLENGE</li>
+                        <li>RECYCLING IS THE WAY</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <h1>TAGS CLOUD</h1>
+                    <div class="row cloud justify-content-start pt-4 pb-1">
+                        <div class="col-6 cloud-container">CHARITY</div>
+                        <div class="col-6 cloud-container">DONATION</div>
+                    </div>
+                    <div class="row justify-content-start py-1">
+                        <div class="col-6 cloud-container">ECO</div>
+                        <div class="col-6 cloud-container">ENVIRONMENT</div>
+                    </div>
+                    <div class="row justify-content-start py-1">
+                        <div class="col-6 cloud-container">NATURE</div>
+                        <div class="col-6 cloud-container">ORGANIC</div>
+                    </div>
+                    <div class="row justify-content-start py-1">
+                        <div class="col-6 cloud-container">RECYCLE</div>
+                        <div class="col-6 cloud-container">ECOLOGY</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row contact py-4">
+                <div class="col-sm-4 col-12">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>1-800-123-1234</p>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Brooklyn, NY 10036, United States</p>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <i class="fas fa-envelope"></i>
+                    <p>example@green-press.com</p>
+                </div>
+            </div>
+
+            <div class="row mini-footer justify-content-between ">
+                <div class="col-sm-8 col-12">
+                    <span>Privacy Policy</span> / THIS IS A SAMPLE WEBSITE - CMSMASTERS © 2021 / ALL RIGHTS RESERVED
+                </div>
+                <div class="col-sm-4 col-12 text-end d-flex justify-content-between">
+                    <p>ABOUT THE COMPANY</p>
+                    <p>DETAILED PRICING</p>
+                    <p>CONTACT US</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
